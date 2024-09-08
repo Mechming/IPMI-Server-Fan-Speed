@@ -19,4 +19,14 @@ This project provides a solution for dynamically controlling fan speeds on a Sup
 - `bc` utility for floating-point arithmetic
 - motherboard with IPMI support
 
+## Installation
 
+- Create script file at /usr/local/bin/monitor_fan_speed.sh
+- add contents to the script file using vi or nano
+- chmod +x /usr/local/bin/monitor_fan_speed.sh
+- Create a systemd service file at /etc/systemd/system/monitor_fan_speed.service
+- add contents to the service file using vi or nano
+- enable and start the service
+- systemctl enable monitor_fan_speed.service && systemctl start monitor_fan_speed.service
+- Check the status of the service to ensure it's running correctly
+- systemctl status monitor_fan_speed.service
