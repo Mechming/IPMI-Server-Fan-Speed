@@ -1,0 +1,12 @@
+[Unit]
+Description=Monitor and Adjust Fan Speed Based on Temperature
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/monitor_fan_speed.sh
+Restart=always
+RestartSec=30
+User=root
+
+[Install]
+WantedBy=multi-user.target
